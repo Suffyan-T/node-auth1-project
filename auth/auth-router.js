@@ -4,7 +4,7 @@ const router = require("express").Router();
 
 const Users = require("../users/users-model.js");
 
-router.post("/register", (req, res) => {
+router.post("/api/register", (req, res) => {
   const userInfo = req.body;
 
   // the pasword will be hashed and re-hashed 2 ^ 8 time
@@ -20,7 +20,7 @@ router.post("/register", (req, res) => {
     .catch(err => res.send(err));
 });
 
-router.post("/login", (req, res) => {
+router.post("/api/login", (req, res) => {
   const { username, password } = req.body;
 
   Users.findBy({ username })

@@ -32,7 +32,7 @@ server.use("/api/users", restricted, usersRouter);
 server.use("/api/auth", authRouter);
 
 server.get("/", (req, res) => {
-    res.send(<h1>Users Database</h1>);
+    res.send('<h1>Users Database</h1>');
   });
 
   module.exports = server;
